@@ -69,7 +69,7 @@ router.post('/', async (req, res) => {
     }
 
     // Sending response
-    res.send({ success: true, url: process.env.HOST + '/api/files/' + files });
+    res.send({ success: true, url:'nevella-server.herokuapp/api/files/' + files });
   } catch (error) {
     res.send({ success: false, error: error });
   }
