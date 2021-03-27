@@ -33,7 +33,6 @@ router.get('/:id', async (req, res) => {
  * Posts.
  */
 router.post('/', async (req, res) => {
-  // console.log(process.env.HOST)
   try {
     let { type, data } = req.body;
     let allowed = ['docx', 'odt', 'rtf', 'pdf', 'txt', 'epub', 'md', 'html'];
@@ -69,7 +68,7 @@ router.post('/', async (req, res) => {
     }
 
     // Sending response
-    res.send({ success: true, url:'nevella-server.herokuapp/api/files/' + files });
+    res.send({ success: true, url: 'https://nevella-server.herokuapp.com' + '/api/files/' + files });
   } catch (error) {
     res.send({ success: false, error: error });
   }
