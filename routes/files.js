@@ -67,7 +67,7 @@ router.post('/', async (req, res) => {
         break;
     }
     // Sending response
-    res.send({ success: true, url: 'https://nevella-server.herokuapp.com' + '/api/files/' + files });
+    res.send({ success: true, url: 'https://nevella-server.herokuapp.com/api/files/' + files });
   } catch (error) {
     res.send({ success: false, error: error });
   }
