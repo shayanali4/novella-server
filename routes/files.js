@@ -66,7 +66,6 @@ router.post('/', async (req, res) => {
         files = await CreateText(data);
         break;
     }
-
     // Sending response
     res.send({ success: true, url: 'https://nevella-server.herokuapp.com' + '/api/files/' + files });
   } catch (error) {
